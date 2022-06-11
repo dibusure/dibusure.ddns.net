@@ -11,34 +11,28 @@
     <title>dhub</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="particles.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
 <style>
 body {
     background: rgb(132,70,217);
-background: linear-gradient(90deg, rgba(132,70,217,1) 0%, rgba(135,136,191,1) 51%, rgba(76,112,212,1) 100%); 
+    background: linear-gradient(90deg, rgba(132,70,217,1) 0%, rgba(135,136,191,1) 51%, rgba(76,112,212,1) 100%); 
+    display: flex;
     color: #f4efe6;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
 }
-
-/*.animate__content {
-    margin: 0 0.5rem;
-
-    animation: slideInLeft;
-    animation-duration: 2s;
-}*/
 .animate__content {
-    animation-duration: 2s;
-    animation-name: slidein;}
+    animation: slideInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
 
-@keyframes slidein {
-  from {
-    transform: translateX(-100%);
-  }
+    padding: 8px;
 
-  to {
-    transform: translateX(0%);
-  }
+
 }
-
 
 .info {
    height: 100%;
@@ -71,6 +65,27 @@ p {
     width: 10em;
     border-radius: 50%;
     margin-bottom: 24px;
+    animation: rotate_pic 3s;
+    animation-delay: 3s;
+}
+
+
+@keyframes rotate_pic {
+    0% { 
+        transform: none;
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: none;
+    }
 }
 
 .footer {
@@ -91,8 +106,19 @@ p {
     padding: 10px;
     left: 0;
     bottom: 0;
-   font-family: 'Iosevka', sans-serif;
+    font-family: 'Iosevka', sans-serif;
+}
 
+.more {
+    z-index: 999;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Iosevka', sans-serif;
+}
+
+.more a {
+    color: #262525;
 }
 
 .links {
@@ -106,6 +132,10 @@ p {
 }
 .info a {
     color: #f4efe6;
+}
+
+html {
+    height: 100%;
 }
 
 </style>
@@ -130,7 +160,7 @@ p {
         <div class="footer">
             <h4>Hosted by
                 <a href="http://hrmndv.ddns.net">hrmndv</a>
-            </h6> 
+            </h4> 
         </div>
     </div>
 </body>
