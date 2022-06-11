@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +18,27 @@ body {
 background: linear-gradient(90deg, rgba(132,70,217,1) 0%, rgba(135,136,191,1) 51%, rgba(76,112,212,1) 100%); 
     color: #f4efe6;
 }
+
+/*.animate__content {
+    margin: 0 0.5rem;
+
+    animation: slideInLeft;
+    animation-duration: 2s;
+}*/
+.animate__content {
+    animation-duration: 2s;
+    animation-name: slidein;}
+
+@keyframes slidein {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
 
 .info {
    height: 100%;
@@ -87,24 +112,26 @@ p {
 
 </head>
 <body>
-    <div class="info">
-        <img class="pic" src="imgs/dibusure.jpg">
-        <h1>Dibusure</h1>
-        <p>Программист, системный администратор, энтузиаст.</p>
-        <div class="links">
-            <a href="https://github.com/dibusure">GitHub</a>
-            /
-            <a href="https://www.reddit.com/user/_dibusure">Reddit</a>
-            /
-            <a href="https://t.me/dibusure">Telegram</a>
+    <div class="animate__content">
+        <div class="info">
+            <img class="pic" src="imgs/dibusure.jpg">
+            <h1>Dibusure</h1>
+            <p>Программист, системный администратор, энтузиаст.</p>
+            <div class="links">
+                <a href="https://github.com/dibusure">GitHub</a>
+                /
+                <a href="https://www.reddit.com/user/_dibusure">Reddit</a>
+                /
+                <a href="https://t.me/dibusure">Telegram</a>
+            </div>
+            
         </div>
-        
-    </div>
 
-    <div class="footer">
-        <h4>Hosted by
-            <a href="http://hrmndv.ddns.net">hrmndv</a>
-        </h6> 
+        <div class="footer">
+            <h4>Hosted by
+                <a href="http://hrmndv.ddns.net">hrmndv</a>
+            </h6> 
+        </div>
     </div>
 </body>
 </html>
